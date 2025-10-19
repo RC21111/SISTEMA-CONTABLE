@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F7F2F2;
+}
+
+/* === Topbar (antes .sidebar vertical) === */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;              /* ocupa todo el ancho */
+  height: 80px;          /* alto del encabezado */
+  width: 100%;
+  background-color: #303845;
+  display: flex;
+  align-items: center;   /* centra verticalmente los items */
+  padding: 0 16px;
+  z-index: 1000;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+/* logo */
+.sidebar .logo{
+  padding: 0;
+  margin-right: 12px;
+}
+.sidebar .logo img{
+  height: 70px;          /* tamaño del ícono */
+  width: auto;
+}
+
+/* enlaces de navegación */
+/* enlaces de navegación: alinea con barra de 80px */
+.sidebar a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 14px;
+  line-height: 80px;     /* <-- antes 64px */
+  margin-top: 0;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+.sidebar a:hover{
+  color: #3a3a3a;
+  background-color: rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+
+/* empuja "Cerrar sesión" a la derecha */
+.sidebar .logout-link{
+  margin-left: auto;
+}
+
+.content{
+  margin-left: 0;            /* <-- quita el 300px de la antigua sidebar */
+  padding: 24px;
+  padding-top: 120px;        /* <-- espacio bajo la barra (80px) + aire */
+  padding-bottom: 10vh;      /* <-- evita que el footer fijo lo tape */
+  max-width: 1200px;         /* opcional: ancho cómodo */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.content h2{
+  font-size: 40px;
+  margin-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold; 
+}
+
+.btn-grande {
+  padding: 40px 90px; 
+  font-size: 25px; 
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold; 
+  background-color: #303845;
+}
+
+.btn-grande:hover {
+  color: #ffffff;
+  background-color: rgb(58, 58, 58);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+
+footer
+{
+    background-color: #303845;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: fixed;
+    margin-top: 5vh;
+    bottom: 0px;
+    color: #fff;
+    
+
+}
+
+
+/* ===== Grid de opciones (reemplaza los botones grandes) ===== */
+.cost-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 24px auto 0;
+}
+
+/* Tarjeta enlazable */
+.cost-card{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 18px 20px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  color: #1f2937;
+  text-decoration: none; /* quita el subrayado normal */
+}
+
+/* Efectos hover/focus */
+.cost-card:hover,
+.cost-card:focus{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.10);
+  border-color: rgba(0,0,0,.15);
+  outline: none;
+   text-decoration: none; /* evita el subrayado al pasar el mouse */
+}
+
+/* Icono circular */
+.cost-card .card-icon{
+  flex: 0 0 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #303845;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: .5px;
+}
+
+/* Contenido de la tarjeta */
+.cost-card .card-body{
+  text-align: left;
+}
+.cost-card .card-title{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: #111827;
+}
+.cost-card .card-desc{
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Píldora a la derecha (opcional) */
+.cost-card .pill{
+  margin-left: auto;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .cost-grid{ grid-template-columns: 1fr; }
+}
+
+/* Afinamos el título y espaciado de esta vista */
+.content h2{
+  font-size: 36px;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}

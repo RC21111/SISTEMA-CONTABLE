@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F7F2F2;
+}
+
+/* === Topbar === */
+.sidebar{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #303845;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 1000;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.sidebar .logo{ padding: 0; margin-right: 12px; }
+.sidebar .logo img{ height: 70px; width: auto; }
+.sidebar a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 14px;
+  line-height: 80px;       /* alinea con barra */
+  margin-top: 0;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+.sidebar a:hover{
+  color: #3a3a3a;
+  background-color: rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+.sidebar .logout-link{ margin-left: auto; }
+
+/* === Contenido principal === */
+.content{
+  margin-left: 0;
+  padding: 24px;
+  padding-top: 120px;    /* espacio bajo el menú fijo */
+  padding-bottom: 10vh;  /* que el footer no tape */
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.content h2{
+  font-size: 40px;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ====== Tarjetas (mismo diseño que la vista de Control de Costos) ====== */
+.ef-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 24px auto 0;
+}
+
+.ef-card{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;           /* sin subrayado */
+  background: #ffffff;
+  padding: 18px 20px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  color: #1f2937;
+  text-decoration: none; /* quita el subrayado normal */
+}
+.ef-card:hover,
+.ef-card:focus{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.10);
+  border-color: rgba(0,0,0,.15);
+  outline: none;
+  text-decoration: none; /* quita el subrayado normal */
+}
+/* Icono circular */
+.ef-card .card-icon{
+  flex: 0 0 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #303845;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* Texto */
+.ef-card .card-body{ text-align: left; }
+.ef-card .card-title{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: #111827;
+}
+.ef-card .card-desc{
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+/* Píldora a la derecha (opcional) */
+.ef-card .pill{
+  margin-left: auto;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .ef-grid{ grid-template-columns: 1fr; }
+}
+
+/* === Footer === */
+footer{
+  background-color: #303845;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+}

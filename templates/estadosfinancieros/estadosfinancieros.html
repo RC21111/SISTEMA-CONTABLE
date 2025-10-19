@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estados Financieros</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'styles/estados.css' %}">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="py-4 text-center logo">
+      <a href="/"><img src="{% static 'img/home.png' %}" alt="home"></a>
+    </div>
+    <a href="/catalogo_cuentas" class="aclass">Catálogo de Cuentas</a>
+    <a href="/transacciones" class="aclass">Transacciones</a>
+    <a href="/control_costos" class="aclass">Control de Costos</a>
+    <a href="/estados_financieros" class="aclass">Estados Financieros</a>
+    <a href="logout" class="logout-link">Cerrar sesión</a>
+  </div>
+
+ <div class="content">
+  <h2>Estados Financieros</h2>
+
+  <div class="ef-grid">
+    <!-- Balance de Comprobación -->
+    <a class="ef-card" href="/balance_comprobacion" aria-label="Balance de Comprobación">
+      <div class="card-icon">BC</div>
+      <div class="card-body">
+        <div class="card-title">Balance de Comprobación</div>
+  
+      </div>
+     
+    </a>
+
+    <!-- Estado de Resultados -->
+    <a class="ef-card" href="/estado_resultados" aria-label="Estado de Resultados">
+      <div class="card-icon">ER</div>
+      <div class="card-body">
+        <div class="card-title">Estado de Resultados</div>
+      
+      </div>
+      
+    </a>
+
+    <!-- Estado de Capital -->
+    <a class="ef-card" href="/estado_capital" aria-label="Estado de Capital">
+      <div class="card-icon">EC</div>
+      <div class="card-body">
+        <div class="card-title">Estado de Capital</div>
+      
+      </div>
+     
+    </a>
+
+    <!-- Balance General -->
+    <a class="ef-card" href="/balance_general" aria-label="Balance General">
+      <div class="card-icon">BG</div>
+      <div class="card-body">
+        <div class="card-title">Balance General</div>
+        
+      </div>
+     
+    </a>
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer>
+    <p>Derechos reservados 2025. Sistemas Contables UES</p>
+  </footer>
+</body>
+</html>
+

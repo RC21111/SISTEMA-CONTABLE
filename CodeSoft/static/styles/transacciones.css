@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F7F2F2;
+}
+
+/* === Topbar (antes .sidebar vertical) === */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;              /* ocupa todo el ancho */
+  height: 80px;          /* alto del encabezado */
+  width: 100%;
+  background-color: #303845;
+  display: flex;
+  align-items: center;   /* centra verticalmente los items */
+  padding: 0 16px;
+  z-index: 1000;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+/* logo */
+.sidebar .logo{
+  padding: 0;
+  margin-right: 12px;
+}
+.sidebar .logo img{
+  height: 70px;          /* tamaño del ícono */
+  width: auto;
+}
+
+/* enlaces de navegación */
+.sidebar a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 14px;       /* espacio lateral entre links */
+  line-height: 64px;     /* los alinea con la barra */
+  margin-top: 0;         /* (antes se usaba para la columna) */
+  transition: 0.25s;
+  white-space: nowrap;
+}
+.sidebar a:hover{
+  color: #3a3a3a;
+  background-color: rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+
+/* empuja "Cerrar sesión" a la derecha */
+.sidebar .logout-link{
+  margin-left: auto;
+}
+
+/* === Contenido === */
+.content{
+  margin-left: 0;        /* ya NO hay barra lateral */
+  padding: 20px;
+  padding-top: 96px;     /* deja espacio bajo la barra fija */
+}
+
+
+
+/* Responsivo: si la pantalla es angosta, permite scroll horizontal solo para los links */
+@media (max-width: 992px){
+  .sidebar{
+    overflow-x: auto;
+  }
+  .sidebar a{
+    padding: 0 12px;
+    font-size: 16px;
+  }
+  .content{
+    padding-top: 88px;
+  }
+}
+
+
+/* Compactar el título y centrar el layout */
+h2{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 32px;        /* antes era más grande */
+  margin: 10px 0 6px;     /* menos espacio */
+}
+
+.content{
+  margin-left: 0;         /* porque ahora el menú es superior */
+  padding: 16px;
+  padding-top: 88px;      /* espacio bajo la barra fija */
+  max-width: 1200px;      /* ancho cómodo */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Tarjeta tipo formulario para filtros/acciones */
+.toolbar-card{
+  max-width: 1100px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  background: #fff;
+  margin: 8px auto 18px;
+}
+.toolbar-card .card-body{
+  padding: 14px 16px;     /* compacto */
+}
+
+/* Acciones pegaditas y ordenadas */
+.toolbar-actions .btn{
+  padding: .375rem .75rem;
+  font-size: 0.95rem;
+}
+
+/* Compactar la tabla */
+.table{
+  font-size: 0.95rem;
+}
+.table thead th{
+  padding: .55rem .75rem;
+}
+.table td{
+  padding: .55rem .75rem;
+}
+
+/* Hace que la tabla luzca integrada con el cuadro */
+.toolbar-card {
+  max-width: 1100px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  background: #fff;
+  margin: 8px auto 18px;
+  overflow: hidden; /* clave: integra bordes de la tabla */
+}
+
+/* Quita el borde extra entre la tabla y el card */
+.table {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Redondea las esquinas superiores de la tabla dentro del card */
+.toolbar-card .table thead:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+.toolbar-card .table thead:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+
+
+
+footer
+{
+    background-color: #303845;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: fixed;
+    margin-top: 5vh;
+    bottom: 0px;
+    color: #fff;
+    
+
+}
+
