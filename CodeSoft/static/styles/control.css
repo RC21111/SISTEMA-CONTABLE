@@ -120,6 +120,8 @@ footer
   width: 100%;
   max-width: 1100px;
   margin: 24px auto 0;
+  place-items: center;
+  justify-content: center;
 }
 
 /* Tarjeta enlazable */
@@ -136,6 +138,7 @@ footer
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   color: #1f2937;
   text-decoration: none; /* quita el subrayado normal */
+  justify-content: center;
 }
 
 /* Efectos hover/focus */
