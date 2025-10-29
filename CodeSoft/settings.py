@@ -107,11 +107,11 @@ WSGI_APPLICATION = 'CodeSoft.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'codesoftdb',
-        'USER': 'postgres',
-        'PASSWORD': 'NuevaContraseñaSegura',  # la que pusiste en PostgreSQL
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'bydqy34t7i8jaff3gaku',
+        'USER': 'u9fefhjn3fzslbdfmllj',
+        'PASSWORD': '2yymTu4Tjg2qYnuDRz1oyKbFbTtSVe',
+        'HOST': 'bydqy34t7i8jaff3gaku-postgresql.services.clever-cloud.com',
+        'PORT': '50013',
     }
 }
 
