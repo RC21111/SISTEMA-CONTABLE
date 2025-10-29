@@ -225,7 +225,7 @@ def general(request):
             cuenta1_haber = -1 * cuenta1.saldo
         else:
             cuenta1_debe = cuenta1.saldo
-        cuenta2 = ResumenCuentas.objects.filter(periodo=periodo_seleccionado, cuenta_id=110102).first()
+        cuenta2 = ResumenCuentas.objects.filter(periodo=periodo_seleccionado, cuenta_id=110102).first() #esto hace la consulta a la base de datos para obtener el objeto ResumenCuentas correspondiente al período seleccionado y a la cuenta con ID 110102.
         if cuenta2.saldo < 0:
             cuenta2_haber = -1 * cuenta2.saldo
         else:

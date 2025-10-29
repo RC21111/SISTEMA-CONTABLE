@@ -94,3 +94,69 @@ footer
     
 
 }
+
+/* 🔹 Fondo general del contenedor DataTables */
+.dataTables_wrapper {
+  background-color: #212529; /* mismo fondo que table-dark */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* 🔹 Labels "Mostrar X registros" y "Buscar" */
+.dataTables_length label,
+.dataTables_filter label {
+  color: #fff !important;
+}
+
+/* 🔹 Select de cantidad de registros */
+.dataTables_length select {
+  background-color: #343a40 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* 🔹 Input del buscador */
+.dataTables_filter input {
+  background-color: #343a40 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* 🔹 Información inferior (Mostrando registros) */
+.dataTables_info {
+  color: #fff !important;
+}
+
+/* 🔹 Controles de paginación */
+.dataTables_paginate .paginate_button {
+  background-color: #343a40 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 4px 8px;
+}
+
+/* 🔹 Botón activo */
+.dataTables_paginate .paginate_button.current {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border: 1px solid #777 !important;
+}
+
+/* 🔹 Hover en los botones de paginación */
+.dataTables_paginate .paginate_button:hover {
+  background-color: #495057 !important;
+  color: #fff !important;
+}
+
+/* 🔹 Texto de "No hay datos disponibles" */
+table.dataTable td.dataTables_empty {
+  color: #fff !important;
+  background-color: #2c3034 !important;
+}
